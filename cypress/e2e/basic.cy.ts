@@ -3,15 +3,13 @@ describe('empty spec', () => {
     cy.visit('/')
   })
 
-  it('displays the resources text', () => {
-    cy.get('h2')
-    .contains('This is a bare-bones Angular project that has everything you need to quickly deploy it to Netlify');
+  it('displays the main heading', () => {
+    cy.get('h1')
+    .contains('J. Worden & Sons Paving LLC');
   })
-  it('renders the image', () => {
-    cy.get('img')
-    .should('be.visible')
-    .and(($img) => {
-      expect($img[0].naturalWidth).to.be.greaterThan(0);
-    })
+
+  it('displays the services section', () => {
+    cy.get('h2')
+    .contains('Our Services');
   })
 })

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-quickstart'`, () => {
+  it(`should have as title 'J. Worden & Sons Paving LLC'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-quickstart');
+    expect(app.title).toEqual('J. Worden & Sons Paving LLC');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-quickstart app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('J. Worden & Sons Paving LLC');
   });
 });
